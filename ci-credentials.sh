@@ -62,7 +62,7 @@ git clone \
 #
 
 info "Importing GPG key"
-gpg --import ".ci/credentials/APK Signing/librarySimplified.asc" || fatal "Could not import GPG key"
+gpg --import ".ci/credentials/lfa.asc" || fatal "Could not import GPG key"
 
 info "Signing test file"
 echo "Test" > hello.txt || fatal "Could not create test file"
