@@ -3,6 +3,10 @@ Android-CI
 
 The AULFA CI scripts.
 
+![ci](./readme.jpg?raw=true)
+
+_Image by [monikawl999](https://pixabay.com/users/monikawl999-1744293/) from [Pixabay](https://pixabay.com/photos/wave-rock-australia-photo-contest-1247320/)_
+
 ### What Is This?
 
 The contents of this repository define the CI scripts used to continuously
