@@ -37,6 +37,7 @@ do
     --no-perms \
     --include '*.apk' \
     --exclude '*' \
+    --chmod=D0775,F664 \
     "${APK_RELEASE_DIRECTORY}/" \
     "builds.lfa.one:/repository/testing/all/" ||
     fatal "could not upload APK files"
