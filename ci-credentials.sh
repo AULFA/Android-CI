@@ -84,6 +84,7 @@ cat >> "$HOME/.ssh/config" <<EOF
 Host builds.lfa.one
   Port 1022
   User ci
+
 EOF
 
 #------------------------------------------------------------------------
