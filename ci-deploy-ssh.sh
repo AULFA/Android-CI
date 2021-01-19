@@ -28,6 +28,12 @@ for PROJECT in ${SSH_PROJECTS}
 do
   info "uploading binaries for ${PROJECT}"
   APK_RELEASE_DIRECTORY="${PROJECT}/build/outputs/apk/release/"
-  rsync -avz --progress --delay-updates "${APK_RELEASE_DIRECTORY}/" "builds.lfa.one:/repository/testing/all/" ||
+  rsync \
+    -avz \
+    --progress \
+    --delay-updates \
+    --include '*.apk' \
+    "${APK_RELEASE_DIRECTORY}/" \
+    "builds.lfa.one:/repository/testing/all/" ||
     fatal "could not upload APK files"
 done
