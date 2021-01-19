@@ -81,7 +81,11 @@ fi
 # Run ssh uploads if configured.
 #
 
-
+if [ -f ".ci-local/deploy-ssh.conf" ]
+then
+  ci-deploy-ssh.sh ||
+    fatal "could not upload ssh builds"
+fi
 
 #------------------------------------------------------------------------
 # Run local deploy hooks if present.

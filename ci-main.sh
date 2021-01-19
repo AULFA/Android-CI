@@ -26,6 +26,9 @@ CI_BIN_DIRECTORY=$(realpath .ci) ||
 
 export PATH="${PATH}:${CI_BIN_DIRECTORY}:."
 
+command -v rsync ||
+  fatal "could not find an rsync binary"
+
 case ${BUILD_TYPE} in
   pull-request)
     info "Building in pull-request mode"
