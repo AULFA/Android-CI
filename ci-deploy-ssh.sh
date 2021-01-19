@@ -32,7 +32,9 @@ do
     -avz \
     --progress \
     --delay-updates \
+    --no-times \
     --include '*.apk' \
+    --exclude '*' \
     "${APK_RELEASE_DIRECTORY}/" \
     "builds.lfa.one:/repository/testing/all/" ||
     fatal "could not upload APK files"
