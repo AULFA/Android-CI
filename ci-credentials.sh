@@ -82,6 +82,10 @@ cp -v ".ci/credentials/builds-ssh.key.pub" "$HOME/.ssh/id_ed25519.pub" ||
 cp -v ".ci/credentials/builds-ssh.known_hosts" "$HOME/.ssh/known_hosts" ||
   fatal "could not copy key"
 
+chmod 0600 "$HOME/.ssh/id_ed25519" || fatal "could not set permissions"
+chmod 0644 "$HOME/.ssh/id_ed25519.pub" || fatal "could not set permissions"
+chmod 0644 "$HOME/.ssh/known_hosts" || fatal "could not set permissions"
+
 cat >> "$HOME/.ssh/config" <<EOF
 Host builds.lfa.one
   Port 1022
