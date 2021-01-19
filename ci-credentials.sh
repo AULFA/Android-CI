@@ -80,6 +80,12 @@ cp -v ".ci/credentials/builds-ssh.key" "$HOME/.ssh/id_ed25519" ||
 cp -v ".ci/credentials/builds-ssh.key.pub" "$HOME/.ssh/id_ed25519.pub" ||
   fatal "could not copy key"
 
+cat >> "$HOME/.ssh/config" <<EOF
+Host builds.lfa.one
+  Port 1022
+  User ci
+EOF
+
 #------------------------------------------------------------------------
 # Download Brooklime if necessary.
 #
