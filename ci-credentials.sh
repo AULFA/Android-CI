@@ -69,6 +69,18 @@ echo "Test" > hello.txt || fatal "Could not create test file"
 gpg --sign -a hello.txt || fatal "Could not produce test signature"
 
 #------------------------------------------------------------------------
+# Import the SSH key for uploading builds.
+#
+
+info "Importing SSH key"
+mkdir -p "$HOME/.ssh" ||
+  fatal "could not create .ssh"
+cp -v ".ci/credentials/builds-ssh.key" "$HOME/.ssh/id_ed25519" ||
+  fatal "could not copy key"
+cp -v ".ci/credentials/builds-ssh.key.pub" "$HOME/.ssh/id_ed25519.pub" ||
+  fatal "could not copy key"
+
+#------------------------------------------------------------------------
 # Download Brooklime if necessary.
 #
 
