@@ -79,6 +79,8 @@ cp -v ".ci/credentials/builds-ssh.key" "$HOME/.ssh/id_ed25519" ||
   fatal "could not copy key"
 cp -v ".ci/credentials/builds-ssh.key.pub" "$HOME/.ssh/id_ed25519.pub" ||
   fatal "could not copy key"
+cp -v ".ci/credentials/builds-ssh.known_hosts" "$HOME/.ssh/known_hosts" ||
+  fatal "could not copy key"
 
 cat >> "$HOME/.ssh/config" <<EOF
 Host builds.lfa.one
