@@ -55,7 +55,7 @@ case ${BUILD_TYPE} in
 
   pull-request)
     ./gradlew \
-      -Porg.librarysimplified.no_signing=true \
+      -Pone.lfa.no_signing=true \
       -Dorg.gradle.jvmargs="${JVM_ARGUMENTS}" \
       -Dorg.gradle.daemon=false \
       -Dorg.gradle.parallel=false \
