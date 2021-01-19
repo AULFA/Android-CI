@@ -33,6 +33,8 @@ do
     --progress \
     --delay-updates \
     --no-times \
+    --no-owner \
+    --no-perms \
     --include '*.apk' \
     --exclude '*' \
     "${APK_RELEASE_DIRECTORY}/" \
