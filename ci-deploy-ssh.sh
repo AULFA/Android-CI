@@ -39,6 +39,6 @@ do
     --exclude '*' \
     --chmod=D0775,F664 \
     "${APK_RELEASE_DIRECTORY}/" \
-    "builds.lfa.one:/repository/testing/all/" ||
+    "builds.lfa.one:/repository/testing/" ||
     fatal "could not upload APK files"
 done
